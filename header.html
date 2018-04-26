@@ -1,28 +1,30 @@
 <style>
+.parallax { 
+    /* The image used */
+    background-image: url("https://github.com/holtzy/R-Markdown-Parallax/raw/master/overview_RGG_faded.png");
 
-.myheader {
-  background-image: url("https://github.com/holtzy/data_to_viz/raw/master/img/overview_RGG_faded.png");
-    min-height: 500px; 
-    background-size: 100% 100%;
+    /* Set a specific height */
+    height: 400px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
-  
-    height: 100%; 
-    width: 100% !important;
-  
 }
 
-    
-
+.myimg{
+    width: 10%;
+    color: red;
+    position: absolute;
+    top: 150px;
+    left: 45%;
+}
 </style>
 
-<div class="myheader" style="text-align: center;">
-  <a href="http://www.r-graph-gallery.com"> <img style="width: 20%" src="https://github.com/holtzy/R-Markdown-Parallax/raw/master/overview_RGG_faded.png"> </a>
+<!-- Container element -->
+<div class="parallax">
+    <a href="https://github.com/holtzy/R-Markdown-Parallax"> <img class="myimg" src="https://github.com/holtzy/R-Markdown-Parallax/raw/master/Rlogo.png"> </a>
 </div>
 
 

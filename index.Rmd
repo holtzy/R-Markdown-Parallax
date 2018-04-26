@@ -1,6 +1,6 @@
 ---
 title: "<center><div class='mytitle'>A R Markdown output with parallax</div></center>"
-author: "<center><div class='mysubtitle'>See the code on [github](https://github.com/holtzy/)</div></center>"
+author: "<center><div class='mysubtitle'>See the code on [github](https://github.com/holtzy/R-Markdown-Parallax)</div></center>"
 output:
   html_document:
       css: style.css
@@ -17,8 +17,9 @@ output:
 # How it works
 ***
 
-- You need to place your background image in your footer.html file.
-- 
+- The `footer.html` file calls both the background image and the logo. 
+- The `style.css` file makes the header full width, but keep a restricted area for your document content.
+- The best option is probably to [clone this minimal example](https://github.com/holtzy/R-Markdown-Parallax) to understand how it works.
 
 A little plot from the [R graph gallery](https:www.r-graph-gallery.com)? (We need content in this page to be able to scroll..)
 ```{r, warning=FALSE, message=FALSE, fig.align="center"}
@@ -55,7 +56,7 @@ ggplot(data) +
 # Check the code
 ***
 
-This minimal example is hosted on github. Have a look to it to see how it works.
+This minimal example is [hosted on github](https://github.com/holtzy/R-Markdown-Parallax). Have a look to it to see how it works.
 
-
+<br><br><br>
 </div>
