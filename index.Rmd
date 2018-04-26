@@ -1,6 +1,6 @@
 ---
-title: "<center><div class='mytitle'>A R Markdown output with parallax</div></center>"
-author: "<center><div class='mysubtitle'>See the code on [github](https://github.com/holtzy/R-Markdown-Parallax)</div></center>"
+title: "<center><div class='mytitle'>R Markdown output with parallax</div></center>"
+author: "<center><div class='mysubtitle'>See the code on [github](https://github.com/holtzy/R-Markdown-Parallax). This tip is part of my [Pimp my RMD](https://holtzy.github.io/Pimp-my-rmd/) project.</div></center>"
 output:
   html_document:
       css: style.css
@@ -21,8 +21,10 @@ output:
 - The `style.css` file makes the header full width, but keep a restricted area for your document content.
 - The best option is probably to [clone this minimal example](https://github.com/holtzy/R-Markdown-Parallax) to understand how it works.
 
+>Disclaimer: I'm not an html expert, and there is probably a better / cleaner solution to achieve that..
+
 A little plot from the [R graph gallery](https:www.r-graph-gallery.com)? (We need content in this page to be able to scroll..)
-```{r, warning=FALSE, message=FALSE, fig.align="center"}
+```{r, warning=FALSE, message=FALSE, fig.align="center", fig.height=6}
 # Library
 library(tidyverse)
  
