@@ -1,0 +1,61 @@
+---
+title: "<center><div class='mytitle'>A R Markdown output with parallax</div></center>"
+author: "<center><div class='mysubtitle'>See the code on [github](https://github.com/holtzy/)</div></center>"
+output:
+  html_document:
+      css: style.css
+      toc: FALSE
+      includes: 
+        before_body: header.html
+---
+
+<br><br>
+
+<div class="mycontent">
+
+
+# How it works
+***
+
+- You need to place your background image in your footer.html file.
+- 
+
+A little plot from the [R graph gallery](https:www.r-graph-gallery.com)? (We need content in this page to be able to scroll..)
+```{r, warning=FALSE, message=FALSE, fig.align="center"}
+# Library
+library(tidyverse)
+ 
+# Create data
+value1=abs(rnorm(26))*2
+data=data.frame(x=LETTERS[1:26], value1=value1, value2=value1+1+rnorm(26, sd=1) )
+ 
+# Reorder data using average?
+data = data %>% rowwise() %>% mutate( mymean = mean(c(value1,value2) )) %>% arrange(mymean) %>% mutate(x=factor(x, x))
+ 
+# With a bit more style
+ggplot(data) +
+  geom_segment( aes(x=x, xend=x, y=value1, yend=value2), color="grey") +
+  geom_point( aes(x=x, y=value1), color=rgb(0.2,0.7,0.1,0.5), size=3 ) +
+  geom_point( aes(x=x, y=value2), color=rgb(0.7,0.2,0.1,0.5), size=3 ) +
+  coord_flip()+
+  theme_light() +
+  theme(
+    legend.position = "none",
+    panel.border = element_blank(),
+  ) +
+  xlab("") +
+  ylab("Value of Y") +
+  ggtitle("A random plot showing random data")
+```
+
+
+
+
+
+# Check the code
+***
+
+This minimal example is hosted on github. Have a look to it to see how it works.
+
+
+</div>
